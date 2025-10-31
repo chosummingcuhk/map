@@ -3,20 +3,21 @@
 
 // Add Hong Kong basemap with traditional Chinese labels
 const hkLayer = L.tileLayer.hongKong("basemap.topography");
+const hkLayerLabel = L.tileLayer.hongKong("label.tc");
 
 const map = L.map('map', {
     center: [22.28552, 114.15769],
-    zoom: 13,
-    layers: [hkLayer] // default base layer
+    zoom: 15,
+    layers: [hkLayer,hkLayerLabel] // default base layer
 });
 
 
 var imageUrl = 'https://github.com/chosummingcuhk/map/raw/main/Zoom-現代香港全圖.jpg';
-var latLngBounds = L.latLngBounds([[22.2, 114.1], [22.3, 114.2]]);
+var latLngBounds = L.latLngBounds([[22.289146, 114.137062], [22.279318, 114.152984]]);
 var imageOverlay = L.imageOverlay(imageUrl, latLngBounds,{
     opacity: 0.7,
     interactive: true
-});
+}).addTo(map);
 
 var imageUrl1 = 'https://github.com/chosummingcuhk/map/raw/main/Zoom-China%2C%20Hongkong.jpg';
 var latLngBounds1 = L.latLngBounds([[22.2, 114.1], [22.3, 114.2]]);
