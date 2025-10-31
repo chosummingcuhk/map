@@ -13,11 +13,11 @@ const map = L.map('map', {
 
 
 var imageUrl = 'https://github.com/chosummingcuhk/map/raw/main/Zoom-現代香港全圖.jpg';
-var latLngBounds = L.latLngBounds([[22.289146, 114.137062], [22.279318, 114.152984]]);
+var latLngBounds = L.latLngBounds([[22.291459, 114.137318], [22.278479, 114.153460]]);
 var imageOverlay = L.imageOverlay(imageUrl, latLngBounds,{
     opacity: 0.7,
     interactive: true
-}).addTo(map);
+});
 
 var imageUrl1 = 'https://github.com/chosummingcuhk/map/raw/main/Zoom-China%2C%20Hongkong.jpg';
 var latLngBounds1 = L.latLngBounds([[22.2, 114.1], [22.3, 114.2]]);
